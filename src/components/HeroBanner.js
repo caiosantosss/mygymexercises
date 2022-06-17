@@ -27,16 +27,18 @@ const HeroBanner = () => {
         sx={{ backgroundColor: "#FF2625", padding: "10px" }}>
         Explore Exercises
       </Button>
-      <img src={HeroBannerImage} alt="banner" className="hero-banner-img" />
       <Typography
         fontWeight={600}
         color="#FF2625"
         sx={{
           opacity: 0.1,
           display: { lg: 'block', xs: 'none' }
-        }}>
+        }}
+        fontSize="200px"
+      >
         Exercises
       </Typography>
+      <img src={HeroBannerImage} alt="banner" className="hero-banner-img" />
     </Box >
   )
 }
