@@ -4,11 +4,33 @@ import { exerciseOptions, fetchData } from '../utils/fetchData'
 
 const SearchExercises = () => {
   const [search, setSearch] = useState('')
+  const [exercises, setExercises] = useState([])
+  const [bodyParts, setBodyParts] = useState([])
+
+  useEffect(() => {
+    const fetchExercisesData = async () => {
+      const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
+
+      setBodyParts(['all', ...bodyPartsData])
+    }
+
+    fetchExercisesData();
+  }, [])
+
 
   const handleSearch = async () => {
     if (search) {
-      const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
+      const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
       console.log(exercisesData);
+
+      const searchedExercises = exercisesData.filter((exercise) => exercise.name.toLowerCase().includes(search.toLowerCase())
+        || exercise.target.toLowerCase().includes(search.toLowerCase())
+        || exercise.equipment.toLowerCase().includes(search.toLowerCase())
+        || exercise.bodyPart.toLowerCase().includes(search.toLowerCase())
+      );
+
+      setSearch('');
+      setExercises(searchedExercises);
     }
   }
 
@@ -52,6 +74,9 @@ const SearchExercises = () => {
         >
           Search
         </Button>
+      </Box>
+      <Box>
+
       </Box>
     </Stack >
   )
