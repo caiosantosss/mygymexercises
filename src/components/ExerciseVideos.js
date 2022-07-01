@@ -15,7 +15,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
       <Stack justifyContent="flex-start" flexWrap="wrap" alignItems="center"
         sx={{
           flexDirection: { lg: 'row' },
-          gap: { lg: '120px', xs: '0' },
+          gap: { lg: '120px', xs: '0px' },
         }}
       >
         {exerciseVideos?.slice(0, 3).map((item, index) => (
