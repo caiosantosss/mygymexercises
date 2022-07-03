@@ -40,7 +40,7 @@ const HorizontalScrollbar = ({ data, bodyPart, setBodyPart, isBodyParts }) => {
           m="0 40px"
         >
           {isBodyParts ? <BodyPart item={item} bodyPart={bodyPart} setBodyPart={setBodyPart} isBodyParts />
-            : <ExerciseCard item={item} />}
+            : <ExerciseCard exercise={item} />}
         </Box>
       ))}
     </ScrollMenu>
