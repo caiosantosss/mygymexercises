@@ -8,7 +8,7 @@ const ExerciseCard = ({ exercise }) => {
       <img src={exercise.gifUrl} alt={exercise.name} loading="lazy" />
       <Stack direction="row">
         <Button sx={{
-          ml: '21px', color: '#fff', background: '#ffa9a9', fontSize: '14px', borderRadius: '20px', textTransform: 'capitalize',
+          ml: '20px', color: '#fff', background: '#ffa9a9', fontSize: '15px', borderRadius: '20px', textTransform: 'capitalize',
           '&:hover': {
             backgroundColor: '#ffcbcb',
             color: '#fff'
@@ -17,7 +17,7 @@ const ExerciseCard = ({ exercise }) => {
           {exercise.bodyPart}
         </Button>
         <Button sx={{
-          ml: '21px', color: '#fff', background: '#fcc757', fontSize: '14px', borderRadius: '20px', textTransform: 'capitalize',
+          ml: '20px', color: '#fff', background: '#fcc757', fontSize: '15px', borderRadius: '20px', textTransform: 'capitalize',
           '&:hover': {
             backgroundColor: '#fee3ab',
             color: '#fff'
@@ -26,8 +26,8 @@ const ExerciseCard = ({ exercise }) => {
           {exercise.target}
         </Button>
       </Stack>
-      <Typography ml="21px" color="#000" fontWeight="bold" mt="11px"
-        pb="10px" textTransform="capitalize" fontSize="22px">
+      <Typography ml="20px" color="#000" fontWeight="bold" mt="10px"
+        pb="10px" textTransform="capitalize" fontSize="20px">
         {exercise.name}
       </Typography>
     </Link>
