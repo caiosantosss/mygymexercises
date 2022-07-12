@@ -10,10 +10,10 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => {
         borderTop: bodyPart === item ? '4px solid #fff' : '',
         backgroundColor: '#fff',
         borderBottomLeftRadius: '20px',
-        width: '270px',
-        height: '280px',
+        width: '250px',
+        height: '260px',
         cursor: 'pointer',
-        gap: '47px',
+        gap: '45px',
       }}
       onClick={() => {
         setBodyPart(item);
